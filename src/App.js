@@ -1,12 +1,12 @@
 import './App.css';
-import Drawing from './components/Drawing';
+import Canvas from './components/Canvas';
 
 function App() {
-    return (
-        <>
-            <Drawing />
-        </>
-    );
+  return (
+    <>
+      <Canvas />
+    </>
+  );
 }
 
 export default App;
