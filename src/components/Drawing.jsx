@@ -5,8 +5,6 @@ const Drawing = () => {
   const [brushColor, setBrushColor] = useState('#000000');
   const [brushSize, setBrushSize] = useState(2);
 
-  //   const updateCanvas = (canvasDraw) => (this.modify = canvasDraw);
-
   return (
     <div>
       <div
@@ -21,7 +19,8 @@ const Drawing = () => {
         }}
       >
         <CanvasDraw
-          //   ref={updateCanvas}
+          //   ref={(canvasDraw) => (this.modify = canvasDraw)}
+          lazyRadius={1}
           brushColor={brushColor}
           brushRadius={brushSize}
           hideInterface={true}
@@ -67,17 +66,17 @@ const Drawing = () => {
             setBrushColor(e.target.value);
           }}
         />
-        <button onClick={() => setBrushColor('#FF2626')}>RED</button>
-        <button onClick={() => setBrushColor('#FFAE24')}>ORANGE</button>
-        <button onClick={() => setBrushColor('#FFF824')}>YELLOW</button>
+        <button onClick={() => setBrushColor('#892301')}>Kobe</button>
+        <button onClick={() => setBrushColor('#C8752D')}>Ochre</button>
+        <button onClick={() => setBrushColor('#FEDA86')}>Jasmine</button>
+        <button onClick={() => setBrushColor('#86AC9B')}>Morning Blue</button>
+        <button onClick={() => setBrushColor('#26543F')}>
+          Brunswick Green
+        </button>
+        <button onClick={() => setBrushColor('#111615')}>Eerie Black</button>
       </div>
-      <button
-        onClick={() => {
-          this.modify.undo();
-        }}
-      >
-        UNDO
-      </button>
+      <button>UNDO</button>
+      Und
     </div>
   );
 };
